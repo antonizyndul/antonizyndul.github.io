@@ -1,0 +1,33 @@
+---
+layout: default
+title: Blog
+---
+
+<section class="blog-listing">
+  <div class="container">
+    <div class="section-label">Blog & Notes</div>
+    <h1 class="section-title">All Writing</h1>
+
+    {% if site.posts.size == 0 %}
+      <p class="no-posts">No posts yet — add a Markdown file to <code>_posts/</code> to get started.</p>
+    {% else %}
+      <div class="blog-grid blog-grid-full">
+        {% for post in site.posts %}
+        <a href="{{ post.url | relative_url }}" class="blog-card">
+          <div class="blog-date">{{ post.date | date: "%B %d, %Y" }}</div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% if post.tags.size > 0 %}
+            <div class="blog-tags">
+              {% for tag in post.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <span class="blog-arrow">→</span>
+        </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

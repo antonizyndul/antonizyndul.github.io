@@ -1,0 +1,160 @@
+---
+layout: default
+---
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Researcher · Cognitive Science & Linguistics</p>
+      <h1 class="hero-name">Antoni<br><span class="name-accent">Żyndul</span></h1>
+      <p class="hero-tagline">Sign, Gesture, Corpus Linguistics.</p>
+      <div class="hero-cta">
+        <a href="#research" class="btn btn-primary">View Research</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-bg-text" aria-hidden="true">LANGUAGE</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <div class="about-grid">
+        <div class="about-photo">
+          <div class="photo-frame">
+            <img src="{{ '/assets/img/photo.jpg' | relative_url }}" alt="Antoni Żyndul" onerror="this.parentElement.classList.add('photo-placeholder')" />
+            <div class="photo-placeholder-text">Add your photo to<br><code>assets/img/photo.jpg</code></div>
+          </div>
+        </div>
+        <div class="about-text">
+          <h2>Studying how humans make meaning beyond words.</h2>
+          <p>I am a student researcher at Nicolaus Copernicus University (NCU) in Toruń, Poland, working in the intersection of cognitive science and linguistics. My research focuses on <strong>Polish Sign Language (PJM)</strong>, gesture, and corpus linguistics — exploring the kinematic continuum between lexical signing, constructed action, and pantomime.</p>
+          <p>My work is grounded in hands-on empirical methods: video corpora, motion capture data, and computational annotation pipelines. I am particularly interested in iconicity, transparency, and conventionalization in signed and spoken language.</p>
+          <div class="about-tags">
+            <span class="tag">Sign Language</span>
+            <span class="tag">Gesture Studies</span>
+            <span class="tag">Corpus Linguistics</span>
+            <span class="tag">Cognitive Science</span>
+            <span class="tag">PJM</span>
+          </div>
+        </div><!-- /about-text -->
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-num">NCU</span>
+            <span class="stat-label">Nicolaus Copernicus University, Toruń</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">PJM</span>
+            <span class="stat-label">Polish Sign Language — primary research focus</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num">MOCAP</span>
+            <span class="stat-label">Motion capture & ELAN annotation workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="container">
+      <div class="section-label">02 — Projects & Research</div>
+      <h2 class="section-title">Active Research</h2>
+      <div class="research-grid">
+
+        <div class="research-card featured">
+          <div class="card-tag">Planned PhD Project</div>
+          <h3>Constructed Action in Polish Sign Language</h3>
+          <p>Investigating the kinematic continuum between lexical signing, constructed action (CA), and pantomime in PJM. The project examines iconicity, transparency, and conventionalization, drawing on motion capture data and gesture theory.</p>
+          <div class="card-meta"><span>PJM · MOCAP · Kinematic Analysis</span></div>
+        </div>
+
+        <div class="research-card">
+          <div class="card-tag">Computational</div>
+          <h3>Linguistic Markers of Depression</h3>
+          <p>MA thesis research using the DAIC-WOZ corpus and LIWC-22 to examine linguistic markers of depression and gender differences, with Python and R statistical analysis.</p>
+          <div class="card-meta"><span>LIWC-22 · Python · R · NLP</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-label">03 — Publications</div>
+      <h2 class="section-title">Selected Publications</h2>
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <div class="pub-year">2024</div>
+          <div class="pub-body">
+            <h4>Linguistic Markers of Depression and Gender: Evidence from DAIC-WOZ</h4>
+            <p class="pub-venue">MA Thesis · Nicolaus Copernicus University</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link">PDF</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-item pub-placeholder">
+          <div class="pub-year">—</div>
+          <div class="pub-body">
+            <p class="pub-note">More publications coming soon. Update <code>index.html</code> to add entries here.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-label">04 — Blog & Notes</div>
+      <h2 class="section-title">Recent Writing</h2>
+      <div class="blog-grid">
+        {% for post in site.posts limit:3 %}
+        <a href="{{ post.url | relative_url }}" class="blog-card">
+          <div class="blog-date">{{ post.date | date: "%B %Y" }}</div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 25 }}</p>
+          <span class="blog-arrow">→</span>
+        </a>
+        {% endfor %}
+      </div>
+      {% if site.posts.size > 3 %}
+      <div class="blog-more">
+        <a href="{{ '/blog/' | relative_url }}" class="btn btn-ghost">All posts →</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">05 — Contact</div>
+      <div class="contact-inner">
+        <h2>Let's talk research.</h2>
+        <p>I'm open to collaboration, questions about my work, or just a good conversation about language and cognition.</p>
+        <div class="contact-links">
+          <a href="mailto:{{ site.author.email }}" class="contact-item">
+            <span class="contact-icon">✉</span>
+            <span>{{ site.author.email }}</span>
+          </a>
+          <a href="https://github.com/antonijordan" target="_blank" class="contact-item">
+            <span class="contact-icon">⌥</span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://orcid.org/0009-0007-3310-0832" target="_blank" class="contact-item">
+            <span class="contact-icon">◎</span>
+            <span>ORCID</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>

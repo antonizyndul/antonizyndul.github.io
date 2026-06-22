@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {{ site.author.name }}{% else %}{{ site.author.name }} — Researcher{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  {% seo %}
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">AŻ</a>
+    <ul class="nav-links">
+      <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+      <li><a href="{{ '/#research' | relative_url }}">Research</a></li>
+      <li><a href="{{ '/#publications' | relative_url }}">Publications</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+      <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  {{ content }}
+
+  <footer>
+    <div class="container">
+      <p>{{ site.author.name }} · {{ site.author.affiliation }} · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
