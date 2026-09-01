@@ -10,6 +10,8 @@ I presented work from my MA degree at the NLP-Med conference organised by the Ce
 
 [Download PDF](/assets/NLP-MED_ LIWC, DAIC-WOZ, and Depression.pdf)
 
+The link to the whole event: https://cles.umk.pl/conferences-events/nlpmc/
+
 ![Presenting](/assets/img/nlpmed2026.jpeg)
 ![The public](/assets/img/nlpmed2026_public.jpeg)
 
