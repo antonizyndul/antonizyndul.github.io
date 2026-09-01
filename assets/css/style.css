@@ -736,3 +736,34 @@ footer {
 
 @media (max-width: 900px) { .preview-grid { columns: 2; } }
 @media (max-width: 540px) { .preview-grid { columns: 1; } }
+
+
+.hero-affiliations {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.82rem;
+}
+
+.affil-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+
+.affil-link {
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(168,198,108,0.25);
+  transition: color var(--transition), border-color var(--transition);
+}
+
+a.affil-link:hover {
+  color: var(--text);
+  border-color: var(--accent-2);
+}
+
+.affil-sep { color: var(--text-muted); opacity: 0.4; }
