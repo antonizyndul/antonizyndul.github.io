@@ -729,3 +729,10 @@ footer {
 
 @media (max-width: 900px) { .masonry-grid { columns: 2; } }
 @media (max-width: 540px) { .masonry-grid { columns: 1; } }
+
+/* Gallery preview on main page */
+.preview-grid { columns: 3; }
+.gallery-more { margin-top: 2rem; }
+
+@media (max-width: 900px) { .preview-grid { columns: 2; } }
+@media (max-width: 540px) { .preview-grid { columns: 1; } }
